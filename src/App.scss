@@ -8,6 +8,11 @@ body, html{
   font-size: 1rem;
 }
 
+h1, h2, h3,h4,h5, h6{
+  color: Colors('primary');
+  font-weight: 800;
+}
+
 .custom-layout{
   &-header{
     background: Colors('light') !important;
@@ -137,6 +142,22 @@ nav{
           }
         }
       }
+    }
+  }
+}
+
+
+/** HERO */
+.hero-block{
+  height: 700px;
+}
+
+.hero-section{
+  position: relative;
+  cursor: pointer;
+  &:hover{
+    .overlap-img::before{
+      display: none;
     }
   }
 }
