@@ -1,0 +1,99 @@
+@import './inherited_styles.scss';
+
+
+/**** FUNCTIONS ****/
+@function Colors($color_name){
+  @return map-get($map: $colors, $key: $color_name);
+}
+
+@function Breakpoint($size){
+  @return map-get($map: $grid-breakpoints, $key: $size);
+}
+
+@function TextColorByBGC($color_name){
+  @if darkness(Colors($color_name)) > 80 {
+    @return Colors('light');
+  }@else{
+
+    @return Colors('dark');
+  }
+}
+
+@function getTextColorByBackgroundColor($color){
+  @if lightness(Colors($color)) < 50 {
+   @return Colors('light');
+  }@else{
+    @return Colors('dark');
+  }
+}
+
+/**** MIXINS ****/
+
+/** Hover effect on button **/
+@mixin getHoverEffectOnBackground($color){
+  @if lightness(Colors($color)) < 50 {
+    background-color: lighten($color: Colors($color), $amount: 20) !important;
+    border: 1px solid lighten($color: Colors($color), $amount: 20) !important;
+  }@else{
+    background-color: darken($color: Colors($color), $amount: 15) !important;
+    border: 1px solid darken($color: Colors($color), $amount: 15) !important;
+  }
+}
+
+
+
+
+@mixin ConfiguredButton($name, $color) {
+  &{
+    background: Colors($color) !important;
+    border-color: Colors($color) !important;
+    @extend %btn-default-styles;
+    color: getTextColorByBackgroundColor($color);
+    &:hover{
+      color: getTextColorByBackgroundColor($color);
+      @include getHoverEffectOnBackground($color);
+    }
+    &-outline{
+      background: transparent !important;
+      @extend %btn-default-styles;
+      border: 2px solid Colors($color) !important;
+      color: Colors($color) !important;
+      &:hover{
+        background: Colors($color) !important;
+        border-color: Colors($color) !important;
+        color: getTextColorByBackgroundColor($color) !important;
+      }
+    }
+  }
+}
+
+
+
+
+@mixin CreateButton($name, $color) {
+ 
+  button.#{$app_name}-#{$name}-btn{
+    @include ConfiguredButton($name, $color);
+    
+  }
+  a.#{$app_name}-#{$name}-btn{
+    @include ConfiguredButton($name, $color);
+    display: inline-block;
+    padding: .775rem 1.6rem !important;
+    font-size: $btn-font-size;
+  }
+}
+
+
+// Source mixin
+@mixin make-container($padding-x: padding) {
+  width: 100%;
+  padding-right: $padding-x;
+  padding-left: $padding-x;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// Usage
+
+

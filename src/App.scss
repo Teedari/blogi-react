@@ -1,0 +1,142 @@
+@import './assets/styles/tee.scss';
+
+
+
+
+body, html{
+  font-family: 'Poppins';
+  font-size: 1rem;
+}
+
+.custom-layout{
+  &-header{
+    background: Colors('light') !important;
+    height: auto !important;
+    line-height: unset;
+    // min-height: 5rem !important;
+
+    @media (max-width: Breakpoint('md')) {
+      height: 60px !important;
+    }
+  }
+  &-content{
+    background: Colors('light') !important;
+    min-height: 100vh;
+  }
+  &-footer{
+    background: Colors('light') !important;
+  }
+}
+
+.logo{
+  font-size: 1.5rem;
+  font-family: 'MochiyBold';
+  span{
+    color: Colors('primary');
+  }
+}
+
+.mobile-nav{
+  height: 60px;
+  @media(min-width: Breakpoint('md')) {
+    &{
+      display: none !important;
+    }
+  }
+}
+
+nav{
+  padding: 1rem 0;
+  ul{
+    list-style: none;
+    %link-effect{
+      position: relative;
+      font-weight: bold;
+      a{
+        color: black;
+      }
+      &::before{
+        position: absolute;
+        content: '';
+        background: Colors('primary');
+        width: 100%;
+        height: 10%;
+        left: 0;
+        bottom: 0;
+        animation: moveDown 500ms ease-in alternate-reverse;
+        transition: 500ms;
+        @keyframes moveDown {
+         to{
+          height: 100%;
+          transition: 500ms;
+         }
+        }
+      }
+      &::after{
+        position: absolute;
+        content: '';
+        background: Colors('primary');
+        width: 100%;
+        height: 10%;
+        left: 0;
+        top: 0;
+        // animation: moveUp 500ms ease-in forwards;
+        // transition: 500ms;
+        // @keyframes moveUp {
+        //  to{
+        //   height: 100%;
+        //  }
+        // }
+      }
+    }
+    li {
+      a{
+        color: Colors('gray');
+      }
+      padding: .8rem .5rem;
+      &:hover{
+        @extend %link-effect;
+      }
+  
+      &.active{
+        @extend %link-effect;
+      }
+    }
+  }
+
+  @media (max-width: Breakpoint('md')) {
+
+    &{
+      transform: translateX(-50%) translateY(-200%);
+      // display: none !important;
+      transition: 200ms ease-in-out;
+      left: 50%;
+    }
+    &.active{
+
+      .logo{
+        display: none;
+      }
+      position: fixed;
+      margin-top: 58px;
+      background: Colors('primary');
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%) ;
+      max-width: 400px;
+      width: 100%;
+      flex-flow: column;
+      border-radius: $border-radius-base;
+      box-shadow: 0 2px 4px 2px rgba($color: #000000, $alpha: .2) !important;
+      transition: 200ms ease-in-out;
+      ul{
+        flex-flow: column;
+        li{
+          a{
+            color: Colors('light');
+          }
+        }
+      }
+    }
+  }
+}

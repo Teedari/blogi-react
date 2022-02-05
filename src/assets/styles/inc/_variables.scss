@@ -1,0 +1,48 @@
+
+/** start **/
+$app_name: 'tee';
+
+
+$search-input-size-width: 50em;
+$search-input-size-height: 3rem;
+$search-input-size-radius: 3rem;
+
+/** SIZES **/
+$border-radius-base: .4rem;
+$border-radius-full: 100%;
+$border-radius-curvy: 5rem;
+
+/** Font sizes **/
+$btn-font-size: 1rem !important;
+
+/** Colors **/
+$primary-color: #2a79bd;
+$secondary-color: #dea01e;
+$accent-color: #dbf2ff;
+$dark-color: #3e4756;
+
+
+$btn-colors: (
+  'primary': $primary-color,
+  'secondary': $secondary-color,
+  'accent': $accent-color,
+  'dark': $dark-color
+);
+
+$text-colors: (
+  'light': #ffffff,
+  'gray':  #535353,
+);
+
+$colors: map-merge($map1: $btn-colors, $map2: $text-colors);
+
+
+
+$grid-breakpoints: (
+  'xs': 0,
+  'sm': 576px,
+  'md': 768px,
+  'lg': 992px,
+  'xl': 1200px,
+  'xxl': 1400px
+);

@@ -1,0 +1,9 @@
+/** Buttons Component **/
+.tee-btn{
+  @extend %btn-default-styles;
+}
+
+/* loop throught to create buttons */
+@each $key, $value in $colors {
+  @include CreateButton($key, $key);
+}
