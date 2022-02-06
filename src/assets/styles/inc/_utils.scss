@@ -6,6 +6,16 @@
   background: Colors('accent');
 }
 
+.hoverable{
+  cursor: pointer;
+  &-link{
+    cursor: pointer;
+    &:hover{
+      color: #7c7c7c !important;
+    }
+  }
+}
+
 .image-container{
   width: 100%;
   max-width: 100%;
@@ -29,6 +39,10 @@
   }
   &-md{
     border-radius: .8rem;
+  }
+
+  &-full{
+    border-radius: 3rem;
   }
 }
 
@@ -68,3 +82,8 @@
     background: black;
   }
 }
+
+border-0{
+  border: 0 !important;
+}
+@include getAllBackgroundColors();

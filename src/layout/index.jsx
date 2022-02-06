@@ -6,9 +6,9 @@ import CustomHeader from './components/Header';
 const { Content, Footer} = Layout;
 
 
-const CustomLayout = ({children}) => {
+const CustomLayout = ({hasHeader, children}) => {
   return <Layout>
-    <CustomHeader />
+    { !hasHeader ? <CustomHeader /> : <></>}
     <Content className='custom-layout-content'>
       {children}
     </Content>

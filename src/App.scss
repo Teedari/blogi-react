@@ -9,7 +9,8 @@ body, html{
 }
 
 h1, h2, h3,h4,h5, h6{
-  color: Colors('primary');
+  font-family: 'PoppinsBold';
+  color: Colors('primary') !important;
   font-weight: 800;
 }
 
@@ -43,6 +44,7 @@ h1, h2, h3,h4,h5, h6{
 
 .mobile-nav{
   height: 60px;
+  
   @media(min-width: Breakpoint('md')) {
     &{
       display: none !important;
@@ -118,7 +120,7 @@ nav{
       left: 50%;
     }
     &.active{
-
+      z-index: 5;
       .logo{
         display: none;
       }
@@ -146,10 +148,29 @@ nav{
   }
 }
 
+.custom-tile{
+
+  li{
+    &:not(:last-child){
+      position: relative;
+      &::after{
+        content: '';
+        position: absolute;
+        width: 80%;
+        height: 2px;
+        background: #c7c7c7;
+        bottom: 0;
+        right: 0;
+        margin-bottom: -1rem;
+      }
+    }
+  }
+}
+
 
 /** HERO */
 .hero-block{
-  height: 700px;
+  height: 500px;
 }
 
 .hero-section{
@@ -158,6 +179,29 @@ nav{
   &:hover{
     .overlap-img::before{
       display: none;
+    }
+  }
+}
+
+.image-card{
+  &-1{
+    height: 300px;
+    position: relative;
+    margin-bottom: 20px;
+
+    .card-tag-icon{
+      height: 50px; 
+      width: 50px; 
+      background-color: Colors('primary'); 
+      border-radius: 50%; 
+      margin-bottom: -20px; 
+      margin-right: 20px;
+    }
+
+    .card-tag-name{
+      position: absolute;
+      right: 0;
+      top: 0;
     }
   }
 }

@@ -84,16 +84,12 @@
   }
 }
 
-
-// Source mixin
-@mixin make-container($padding-x: padding) {
-  width: 100%;
-  padding-right: $padding-x;
-  padding-left: $padding-x;
-  margin-right: auto;
-  margin-left: auto;
+@mixin getAllBackgroundColors {
+  @each $key, $value in $colors {
+    .bg-#{$key}{
+      background: Colors($key) !important;
+    }
+  }
 }
-
-// Usage
 
 
