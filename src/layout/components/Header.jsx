@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import { Button, Layout } from 'antd';
+import { Avatar, Button, Layout } from 'antd';
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {  faAlignRight, faThLarge } from '@fortawesome/free-solid-svg-icons';
+import {  faAlignRight, faThLarge, faCubes, faUser } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
 
@@ -21,7 +21,7 @@ const CustomHeader = () => {
       </div>
       <nav className={`d-flex gap-4 ${menuOpened === true ? 'active' : ''}`}>
           <div className='logo'>Blogi<span>.</span></div>
-          <ul className='d-flex align-items-center gap-3'>
+          <ul className='d-flex align-items-center gap-3 flex-grow-1'>
             <li className='active'><Link to={''} className=''>Home</Link></li>
             <li><a href="index.html">Features</a></li>
             <li><a href="index.html">Lifestyle</a></li>
@@ -29,10 +29,10 @@ const CustomHeader = () => {
             <li><a href="index.html">Contact</a></li>
           </ul>
       
-        {/* <div className='d-flex align-items-center justify-content-start gap-2'>
-          <Button className='tee-primary-btn'><FontAwesomeIcon icon={faCubes}/></Button>
-          <Button className='tee-primary-btn'><FontAwesomeIcon icon={faYinYang}/></Button>
-        </div> */}
+        <div className=''>
+          {/* <Button className='tee-accent-btn-outline'><FontAwesomeIcon icon={faCubes}/></Button> */}
+          <Link to='/auth/login' className=''><Avatar icon={<FontAwesomeIcon icon={faUser}/>}/> Login</Link>
+        </div>
       </nav>
     </div>
   </Layout.Header>;

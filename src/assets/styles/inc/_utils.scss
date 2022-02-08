@@ -1,5 +1,11 @@
 /***** UTILITIES *****/
-
+.h-100{
+  height: 100% !important;
+  
+}
+.w-100{
+  width: 100% !important;
+}
 .placeholder{
   width: 100%;
   min-height: 200px;
@@ -33,16 +39,16 @@
 }
 
 .curvy{
-  border-radius: 1rem;
+  border-radius: 1rem !important;
   &-sm{
-    border-radius: .4rem;
+    border-radius: .4rem !important;
   }
   &-md{
-    border-radius: .8rem;
+    border-radius: .8rem !important;
   }
 
   &-full{
-    border-radius: 3rem;
+    border-radius: $border-radius-curvy;
   }
 }
 
@@ -87,3 +93,9 @@ border-0{
   border: 0 !important;
 }
 @include getAllBackgroundColors();
+
+
+.text-shadow{
+  color: transparent;
+  text-shadow: 2px 4px rgba($color: #000000, $alpha: .4);
+}

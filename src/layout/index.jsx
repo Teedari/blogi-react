@@ -1,19 +1,23 @@
-import React from 'react';
-import { Layout } from 'antd';
-import CustomHeader from './components/Header';
+import React from "react";
+import { BackTop, Layout } from "antd";
+import CustomHeader from "./components/Header";
 
+const { Content, Footer } = Layout;
 
-const { Content, Footer} = Layout;
-
-
-const CustomLayout = ({hasHeader, children}) => {
-  return <Layout>
-    { !hasHeader ? <CustomHeader /> : <></>}
-    <Content className='custom-layout-content'>
-      {children}
-    </Content>
-    <Footer className='custom-layout-footer'/>
-  </Layout>;
+const CustomLayout = ({ noHeader, noFooter, children }) => {
+  return (
+    <Layout>
+      {!noHeader ? <CustomHeader /> : <></>}
+      <Content className="custom-layout-content">{children}</Content>
+      {!noFooter ? (
+        <Footer className="custom-layout-footer">
+          <BackTop />
+        </Footer>
+      ) : (
+        <></>
+      )}
+    </Layout>
+  );
 };
 
 export default CustomLayout;

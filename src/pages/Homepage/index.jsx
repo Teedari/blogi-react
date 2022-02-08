@@ -9,6 +9,8 @@ import CustomTile from "../components/CustomTile";
 import CustomImageCard from "../components/CustomImageCard";
 import { data1 } from "../components/data/dataSource";
 import Tile from "../components/CustomTile/Tile";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 const Homepage = () => {
   return (
     <CustomLayout>
@@ -119,6 +121,42 @@ const Homepage = () => {
                     />
                   )}
                 />
+              </div>
+            </Card>
+            <br/>
+            <Card>
+              <div className='heading text-center'>
+                <h3>Topics</h3>
+              </div>
+              <div className="d-flex align-items-center py-3 hoverable-link">
+                <FontAwesomeIcon icon={faChevronRight} />
+                <Typography.Title level={5} className='flex-grow-1 px-4 m-0'>Lifestyle</Typography.Title>
+                <Avatar size='small'>3</Avatar>
+              </div>
+              <div className="d-flex align-items-center py-3 hoverable-link">
+                <FontAwesomeIcon icon={faChevronRight} />
+                <Typography.Title level={5} className='flex-grow-1 px-4 m-0'>Inspiration</Typography.Title>
+                <Avatar size='small'>3</Avatar>
+              </div>
+              <div className="d-flex align-items-center py-3 hoverable-link">
+                <FontAwesomeIcon icon={faChevronRight} />
+                <Typography.Title level={5} className='flex-grow-1 px-4 m-0'>Fashion</Typography.Title>
+                <Avatar size='small'>3</Avatar>
+              </div>
+              <div className="d-flex align-items-center py-3 hoverable-link">
+                <FontAwesomeIcon icon={faChevronRight} />
+                <Typography.Title level={5} className='flex-grow-1 px-4 m-0'>Politics</Typography.Title>
+                <Avatar size='small'>3</Avatar>
+              </div>
+              <div className="d-flex align-items-center py-3 hoverable-link">
+                <FontAwesomeIcon icon={faChevronRight} />
+                <Typography.Title level={5} className='flex-grow-1 px-4 m-0'>Trending</Typography.Title>
+                <Avatar size='small'>3</Avatar>
+              </div>
+              <div className="d-flex align-items-center py-3 hoverable-link">
+                <FontAwesomeIcon icon={faChevronRight} />
+                <Typography.Title level={5} className='flex-grow-1 px-4 m-0'>Culture</Typography.Title>
+                <Avatar size='small'>3</Avatar>
               </div>
             </Card>
           </Col>
