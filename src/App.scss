@@ -230,15 +230,6 @@ nav{
   }
 
 
-  // .ant-input, .ant-input{
-  //   padding: 1rem 1.6rem !important;
-  //   background:lighten($color: Colors('primary'), $amount: 10) !important;
-  //   @if lightness(lighten($color: Colors('primary'), $amount: 10)) > 50 {
-  //     color: Colors('light') !important;
-  //    }@else{
-  //      color: Colors('dark') !important;
-  //    }
-  // }
   .ant-form-item-control-input-content{
     padding: 1rem .8rem !important;
     background:lighten($color: Colors('primary'), $amount: 10) !important;
@@ -250,5 +241,8 @@ nav{
          }
       }
      border-radius: .8rem;
-  }
+    }
+    .ant-form-item-explain-error{
+      color: #eee8a9 !important;
+    }
 }

@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { Avatar, Button, Layout } from 'antd';
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {  faAlignRight, faThLarge, faCubes, faUser } from '@fortawesome/free-solid-svg-icons';
+import {  faAlignRight, faUser } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
 
