@@ -249,7 +249,13 @@ nav{
 
 
 .article-read-hero-section{
-  min-height: 30rem;
+  min-height: 35rem;
   width: 100%;
-  // background: teal;
+  background: url('./assets/images/motor-bike.jpg') no-repeat;
+  background-position: center;
+  background-size: cover;
+  .container{
+    display: grid;
+    height: 100% !important;
+  }
 }
