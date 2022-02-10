@@ -39,6 +39,13 @@ const ReadArticle = () => {
           Ullamco ad occaecat sunt eu pariatur aliquip.
           Ullamco ad occaecat sunt eu pariatur aliquip.
           </p>
+          <Typography.Title level={3}>Ridiculously expensive gadgets for the filthy rich</Typography.Title>
+          <p>Ullamco ad occaecat sunt eu pariatur aliquip.
+          Ullamco ad occaecat sunt eu pariatur aliquip.
+          Ullamco ad occaecat sunt eu pariatur aliquip.
+          Ullamco ad occaecat sunt eu pariatur aliquip.
+          Ullamco ad occaecat sunt eu pariatur aliquip.
+          </p>
         </div>
       </div>
     </CustomLayout>
