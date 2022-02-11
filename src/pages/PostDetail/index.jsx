@@ -8,7 +8,7 @@ import CustomImageCard from "../components/CustomImageCard";
 const PostDetail = () => {
   const params = useParams();
   return (
-    <CustomLayout hasHeader>
+    <CustomLayout noHeader>
       <div className="container">
         <div className="text-center py-3 shadow mt-4 curvy-full position-sticky top-0 d-flex justify-content-between px-3 bg-light" style={{ zIndex: 2}}>
           <Button className="tee-primary-btn-outline sm">Lifestyle</Button>
