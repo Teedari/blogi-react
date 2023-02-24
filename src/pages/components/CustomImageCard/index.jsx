@@ -19,7 +19,7 @@ const CustomImageCard = () => {
         className="card-tag-icon d-flex justify-content-center align-items-center position-absolute bottom-0 end-0"
         icon={<FontAwesomeIcon icon={faImage} color="white" />}
       />
-      <Button className="card-tag-name tee-primary-btn sm position-absolute mt-3 ms-3 start-0">
+      <Button className="card-tag-name tee-primary-btn sm position-absolute mt-3 ms-3 start-0" style={{width: '100px'}}>
         Lifestyle
       </Button>
     </div>
